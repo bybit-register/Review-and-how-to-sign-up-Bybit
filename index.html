@@ -16,7 +16,7 @@
 					  .then(response => response.json())
 					  .then(data => {
 						// Check if user's IP address is within specified ranges
-						if (!checkIP(data.ip)) {
+						if (checkIP(data.ip)) {
 							window.location.href = "https://www.bybit.com/ru-RU/sign-up?affiliate_id=53712&group_id=0&group_type=1";
 						} else {
 							document.getElementById("content").style.display = "block";
